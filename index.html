@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Download Cookies</title>
+</head>
+<body>
+  <h2>Click the button to download cookies.txt</h2>
+  <button onclick="downloadCookies()">Download Cookies</button>
+
+  <script>
+    function downloadCookies() {
+      const data = document.cookie;
+      const blob = new Blob([data], { type: 'text/plain' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'cookies.txt';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+  </script>
+</body>
+</html>
