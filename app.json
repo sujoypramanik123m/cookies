@@ -1,0 +1,44 @@
+{
+    "name": "Video Compressor 2GB Bot",
+    "description": "Telegram Video Compressor Bot with 2GB limit",
+    "repository": "https://github.com/PrimeSujoy/video-compressor-2gb-bot",
+    "keywords": ["video-compressor", "telegram-bot"],
+    "env": {
+        "API_ID": {
+            "description": "Your Telegram API ID",
+            "required": true
+        },
+        "API_HASH": {
+            "description": "Your Telegram API Hash",
+            "required": true
+        },
+        "BOT_TOKEN": {
+            "description": "Your Telegram Bot Token",
+            "required": true
+        },
+        "DB_URL": {
+            "description": "MongoDB URL",
+            "required": true
+        },
+        "DB_NAME": {
+            "description": "MongoDB Database Name",
+            "required": true
+        },
+        "ADMIN": {
+            "description": "Bot Admin IDs",
+            "required": true
+        },
+        "LOG_CHANNEL": {
+            "description": "Log Channel ID",
+            "required": true
+        }
+    },
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        },
+        {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+        }
+    ]
+}

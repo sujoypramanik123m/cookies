@@ -1,0 +1,6 @@
+pyrogram
+motor
+pytz
+aiohttp
+ffmpeg-python
+TgCrypto
